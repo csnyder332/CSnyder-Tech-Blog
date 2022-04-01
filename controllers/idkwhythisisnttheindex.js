@@ -2,7 +2,7 @@ const router = require('express').Router();
 // Import the custom middleware
 //const withAuth = require('../utils/auth');
 
-router.get('/homepage',function (req,res) {
+router.get('/', (req, res) => {
   res.render('homepage');
 });
 
@@ -10,7 +10,7 @@ router.get('/homepage',function (req,res) {
 router.get('/login', (req, res) => {
     // If the user is already logged in, redirect to the homepage
     if (req.session.loggedIn) {
-      res.redirect('/');
+      res.redirect('/homepage');
       return;
     }
     // Otherwise, render the 'login' template
