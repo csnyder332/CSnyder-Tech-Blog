@@ -5,48 +5,30 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bootleg</title>
-  <link rel="stylesheet" type="text/css" href="/css/style.css">
+  <link rel="stylesheet" type="text/css" href="/public/css/style.css">
 </head>
 
 <body>
     <div class='h70 w100 flex column align-items-center justify-center'>
       <header class="flex">
           <h1>BOOTLEG</h1>
-          
       </header>
-      <form class="login-form">
-  <div>
-    <label for="email-login">email:</label>
-    <input type="text" id="email-login" />
-  </div>
-  <div>
-    <label for="password-login">password:</label>
-    <input type="password" id="password-login" />
-  </div>
-  <div>
-    <button type="submit">login</button>
-  </div>
-</form>
-
-<form class="signup-form">
-  <div>
-    <label for="username-signup">username:</label>
-    <input type="text" id="username-signup" />
-  </div>
-  <div>
-    <label for="email-signup">email:</label>
-    <input type="text" id="email-signup" />
-  </div>
-  <div>
-    <label for="password-signup">password:</label>
-    <input type="password" id="password-signup" />
-  </div>
-  <div>
-    <button type="submit">signup</button>
-  </div>
-</form>
+      <nav>
+    <a href="/">Home</a>
+    <!-- If the user is logged in, show a logout button -->
+    {{#if loggedIn}}
+    <button id="logout" class="btn-no-style">Logout</button>
+    {{else}}
+    <!-- Otherwise, show a link to login -->
+    <a href="/login">Login</a>
+    {{/if}}
+  </nav>
+  
       {{{body}}}
     </div>
+    {{#if loggedIn}}
+  <script src="/js/logout.js"></script>
+  {{/if}}
 </body>
 
 </html>
