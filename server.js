@@ -22,7 +22,7 @@ const sess = {
 };
 
 const app = express();
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 80;
 
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
@@ -37,6 +37,7 @@ app.use(routes);
 
 sequelize.sync();
 
-app.listen(process.env.PORT || 5000, function(){
-    console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
-  });
+// listen for calls
+app.listen(PORT, function () {
+    console.log("Listening on PORT: " + PORT)
+});
