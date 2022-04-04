@@ -1,3 +1,3 @@
-DROP DATABASE IF EXISTS bootleg;
+DROP DATABASE IF EXISTS techblog_db;
 
-CREATE DATABASE bootleg;
+CREATE DATABASE techblog_db;
