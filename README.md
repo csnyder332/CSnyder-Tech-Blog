@@ -45,7 +45,8 @@
   ![NPM](https://img.shields.io/npm/l/inquirer)
   
   ## Links
-  Github repo: https://github.com/csnyder332/CSnyder-Tech-Blog
+  Github repo: https://github.com/csnyder332/CSnyder-Tech-Blog  
+  Live URL: https://csnyder-tech-blog.herokuapp.com/  
   
   
   
