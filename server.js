@@ -36,7 +36,7 @@ app.use(express.urlencoded({
 }));
 app.use(routes);
 
-sequelize.sync();
+sequelize.sync({ force: false });
 
 // listen for calls
 app.listen(PORT, function () {
