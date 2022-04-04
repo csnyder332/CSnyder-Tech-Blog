@@ -2,9 +2,11 @@
   "name": "csnyder-tech-blog",
   "version": "1.0.0",
   "description": "Tech Blog",
+  "engines": {
+    "node": "16.14.0"
+  },
   "main": "server.js",
   "scripts": {
-   
     "start": "node server.js"
   },
   "repository": {
@@ -27,6 +29,6 @@
     "express-session": "^1.17.2",
     "mysql2": "^2.3.3",
     "request": "^2.88.2",
-    "sequelize": "^6.17.0"
+    "sequelize": "^6.18.0"
   }
 }
